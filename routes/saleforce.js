@@ -4,6 +4,6 @@ var url= require('url');
 
 router.get('/billing',function(req,res){
     var querry=url.parse(req.url).query;
-    console.log(querry);
+    res.send(querry);
 })
 module.exports = router;
