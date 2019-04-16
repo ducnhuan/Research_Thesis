@@ -1,0 +1,14 @@
+<body class="bg-menu">
+    <div id="vue-form" class="row">
+            <p>Press F12 on your keyboard to view the message in the console view.</p>
+    </div>
+</body>    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+const url='/service/api/order/getDetail/8010o000003Rw6kAAC';
+$.get(url,function(data,status)
+{
+    console.log(data.data.TotalAmount);
+    //console.log(status);
+})
+</script>
