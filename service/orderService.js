@@ -4,8 +4,7 @@ class orderService{
 static getDetail(id)
     {
     //console.log(conf);
-    var conn = new jsforce.Connection({
-         loginUrl: conf.loginUrl});
+    var conn = new jsforce.Connection({loginUrl: conf.loginUrl});
    return conn.login(conf.userName,conf.password)
    .then((userInfo)=>
    {
