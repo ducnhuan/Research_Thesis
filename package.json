@@ -14,9 +14,12 @@
     "http-errors": "~1.6.2",
     "https": "^1.0.0",
     "jsforce": "^1.9.1",
+    "localStorage": "^1.0.4",
     "morgan": "~1.9.0",
+    "node-persist": "^3.0.4",
     "request": "^2.88.0",
     "url": "^0.11.0",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "web3": "github:ethereum/web3.js"
   }
 }
