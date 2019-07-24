@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const orderService =require('../../service/orderService');
 const utils = require('../../ultis/ultis');
+var jsforce = require('jsforce');
 
 router.get('/api/order/getDetail/:id',(req,res)=>{
     const id= req.params.id;

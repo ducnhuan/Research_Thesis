@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var url= require('url');
-var storage = require('localStorage');
 //var web3 = require('web3');
-
 router.get('/billing',function(req,res){
     res.render('order');
    
