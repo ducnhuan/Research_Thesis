@@ -1,26 +1,14 @@
 const jsforce = require('jsforce');
 const conf = require('../config/salesforce')
+const localStorage=require('localStorage');
 class orderService{
 static getDetail(id)
     {
-    var accessToken='00D0o0000018x8b!AQsAQAa264SPQMuPQfiTs9YLAK_grpcUPLdZFbbAyOjMQGr0LGEUylHhdcW320Hg7qdK3CpQFv2gOmJdO9vOZ0.QVjJ4WMNP';
-    var conn= new jsforce.Connection(
-        {
-            oauth2:
-            {
-                clientId:'3MVG9pe2TCoA1Pf7kEZZrWxpDHvTR_VY9EAurnLf5AFnfX4vtnR0_O3eHw5bekg3fIPL61hm1P3vunpIrHnyF',
-                clientSecret:'556B02D98A0A960B456D259B1196551096D7F30806F2D824F2BEAA97EB797D14',
-                redirectUri:'https://smartcontract-iota.herokuapp.com/'
-
-            },
-            instanceUrl:'https://testingsvtech-dev-ed.my.salesforce.com',
-            accessToken:accessToken,
-            refreshToken:'5Aep861ARUdJp8j3X2QKKTJs2Z7e.Sq_TqjsJDpjguc8ZNh5kAL2R0ASil54vGDKFW5K01kkeScCbWITwpYRaI2'
-        });
-    conn.on("refresh",function(accessToken,res)
-    {
-        this.accessToken=accessToken;
+    var conn=new jsforce.Connection({
+        serverUrl:'https://testingsvtech-dev-ed.my.salesforce.com',
+        accessToken:'00D0o0000018x8b!AQsAQE0sAyUlF6FuiwNLwy2kwErbYxC7RcAhLcaUuKUcoCDCLBNoN4.okRBQUr14WzglBMgrye4K.C3DAs9L7Hj8K1cU3tuO'
     })
+    //console.log(accessToken);
     var options ={headers:{'Id':id}};
     return new Promise(function(resolve,reject)
     {
